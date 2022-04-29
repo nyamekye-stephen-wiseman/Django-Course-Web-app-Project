@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h1>This is the projects page</h1>
+
+<ul>{% for project in projects %}
+    <a href="{% url 'project' project.id %}"><li>Title: {{ project.title }}</li></a>
+    <a href="{% url 'update-form' project.id %}">Edit {{project.title}}</a>
+    <a href="{% url 'delete-project' project.id %}">Delete {{project.title}}</a>
+    
+    {% endfor %}
+</ul>
+
+{% endblock %}
