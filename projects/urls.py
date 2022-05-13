@@ -13,5 +13,6 @@ urlpatterns = [
     path('create-form/', createForm, name="create-form"),
     path('update-form/<pk>/', updateForm, name='update-form'),
     path('delete-project/<pk>/', deleteProject, name='delete-project'),
+    
    
 ]
